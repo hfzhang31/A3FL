@@ -1,0 +1,98 @@
+adv_loss:
+  value: ce
+agg_method:
+  value: avg
+attacker_lr_decay:
+  value: 5
+attacker_method:
+  value: sin-adv
+attacker_retrain_times:
+  value: 2
+batch_size:
+  value: 64
+bkd_ratio:
+  value: 0.25
+clip_factor:
+  value: 1
+crfl_sigma:
+  value: 0.002
+dataset:
+  value: cifar10
+decay:
+  value: 0.0005
+dirichlet_alpha:
+  value: 0.9
+dm_adv_K:
+  value: 1
+dm_adv_epochs:
+  value: 5
+dm_adv_model_count:
+  value: 1
+dm_type:
+  value: none
+epochs:
+  value: 100
+ga_lambda:
+  value: 0.1
+gamma:
+  value: 1
+gaussian_bias_factor:
+  value: 1
+gradient_alignment:
+  value: false
+is_poison:
+  value: true
+load_benign_model:
+  value: true
+lr:
+  value: 0.01
+lr_method:
+  value: linear
+malicious_update_method:
+  value: label
+momentum:
+  value: 0.9
+noise_loss_lambda:
+  value: 0.01
+noise_model_count:
+  value: 9
+num_adversaries:
+  value: 1
+num_sampled_participants:
+  value: 10
+num_total_participants:
+  value: 100
+num_worker:
+  value: 0
+poison_epochs:
+  value: 100
+poison_start_epoch:
+  value: 1900
+retrain_times:
+  value: 2
+rlr_threshold:
+  value: 2
+sample_method:
+  value: random
+sample_poison_ratio:
+  value: 0
+save_every:
+  value: 100
+seed:
+  value: 0
+target_class:
+  value: 2
+target_lr:
+  value: 0.02
+test_batch_size:
+  value: 1024
+trigger_inner_epochs:
+  value: 10
+trigger_lr:
+  value: 0.01
+trigger_outter_epochs:
+  value: 200
+trigger_size:
+  value: 5
+wp_factor:
+  value: 0.05

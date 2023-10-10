@@ -1,0 +1,94 @@
+program: sweep_interface.py
+method: grid
+name: clean
+metric:
+    name: bkd_acc
+    goal: maximize
+parameters:
+    dataset:
+        value: 'cifar10'
+    seed:
+        value: 0
+    lr:
+        values: [0.01]
+    gamma:
+        values: [1]
+    lr_method:
+        values: ['linear']
+    target_lr:
+        values: [0.02]
+    momentum: 
+        values: [0.9]
+    decay: 
+        values: [0.0005]
+    batch_size:
+        values: [64]
+    test_batch_size:
+        values: [1024]
+    num_worker:
+        value: 0
+    poison_start_epoch:
+        values: [1900]
+    epochs:
+        values: [100]
+    poison_epochs:
+        values: [100]
+    num_total_participants:
+        value: 100
+    num_adversaries:
+        values: [1]
+    num_sampled_participants:
+        value: 10
+    sample_method:
+        values: ['random']
+    sample_poison_ratio:
+        values: [0]
+    dirichlet_alpha:
+        values: [0.9]
+    retrain_times:
+        values: [2]
+    is_poison:
+        value: true
+    attacker_retrain_times:
+        values: [2]
+    save_every:
+        value: 100
+    trigger_size:
+        values: [5]
+    attacker_method:
+        values: ['sin-adv']
+    malicious_update_method:
+        values: ['label']
+    agg_method:
+        values: ['avg']
+    clip_factor:
+        values: [1]
+    attacker_lr_decay:
+        values: [5]
+    target_class:
+        values: [2]
+    bkd_ratio:
+        values: [0.25]
+    trigger_outter_epochs:
+        values: [200]
+    trigger_lr:
+        values: [0.01]
+    load_benign_model:
+        values: [true]
+    adv_loss:
+        values: ['ce']
+    dm_type:
+        values: ['none']
+    dm_adv_epochs:
+        values: [5]
+    dm_adv_K:
+        values: [1]
+    dm_adv_model_count:
+        values: [1]
+    noise_model_count:
+        values: [9]
+    noise_loss_lambda:
+        values: [0.01]
+    wp_factor:
+        values: [0.05]
+    
